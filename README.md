@@ -1,6 +1,5 @@
-- 👋 Hi, my name is Touseef Hossain
-- 👀 I’m a recently graduated software engineer from the University of Calgary, eager to utilize my knowledge and skills 
-- towards advancing society through innovative software projects.
+- 👋 Hi, my name is Touseef Hossain. This repository consists of projects I've worked on for either work-related reasons or personal growth.
+- 👀 I’m a recently graduated software engineer from the University of Calgary, eager to utilize my knowledge and skills towards advancing society through innovative software projects.
 - 🌱 Even after obtaining my degree, I'm continuously studying new software-related concepts in order to expand my knowledgebase
 - and learn new methodologies that will aid me in designing progressive software products. 
 - 💞️ I’m looking for opportunities that will allow me to gain software-related work experience in order to learn concepts that could only
