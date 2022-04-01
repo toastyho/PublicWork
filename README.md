@@ -1,9 +1,9 @@
-- 👋 Hi, my name is Touseef Hossain. This repository consists of projects I've worked on for either work-related reasons or personal growth.
+- 👋 Hi, my name is Touseef Hossain. This repository consists of my work done on developing a website (passion project) in order to learn the fundamentals of HTML, CSS, JavaScript and little bit of PHP.
 - 👀 I’m a recently graduated software engineer from the University of Calgary, eager to utilize my knowledge and skills towards advancing society through innovative software projects.
 - 🌱 Even after obtaining my degree, I'm continuously studying new software-related concepts in order to expand my knowledgebase
 - and learn new methodologies that will aid me in designing progressive software products. 
 - 💞️ I’m looking for opportunities that will allow me to gain software-related work experience in order to learn concepts that could only
-- be obtained through said experience.
+be obtained through said experience.
 - 📫 You can learn more about my credentials and experience by contacting me via:
 - Email: touhossain@outlook.com
 - Phone: +1 (587)-889-6259
