@@ -1,0 +1,659 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*SECTION: top header of HOME page*/
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255,153,51,0.2),
+    rgba(255,153,51,0.2)),
+    url(FroggyImages/tropicalBG.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.header img{
+    border-radius: 10px; /*Used to 'round' edges*/
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    position: relative;
+    width: 150px;
+    right: 50px;
+}
+.nav-links{/*set (of links) properties*/
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{ /*position properties*/
+    list-style: none;
+    display: inline-block;/*aligns the links horizontally*/
+    padding: 8px 14px;
+    position: relative;
+    left: 50px;
+    bottom: 10px;
+}
+.nav-links ul li a{ /*text properties*/
+    color: forestgreen;
+    text-decoration: none; /*colour of lines on text*/
+    font-size: 16px;
+    font-family: fantasy; /*change font*/
+}
+.nav-links ul li::after{ /*properties of links after activity*/
+    content: ''; /*what appears alongside the (link) words*/
+    width: 0%;
+    height: 2px;
+    background: orange;
+    display: block;
+    margin: auto; /*space porpeties around elements (auto = auto-gen)*/
+    transition: 0.5s; /*shift from 'before/hover' phases to 'after'*/
+}
+.nav-links ul li:hover::after{ /*once mouse hovers over links*/
+    width: 100%;
+}
+.home-text{
+    width: 90%;
+    color:black;
+    position: absolute; /*ensure position does not change*/
+    top: 40%; /* these two lines of code set the text to the middle*/
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: 'Papyrus',fantasy;
+}
+.home-text h1{
+    font-size: 40px;
+}
+.home-text p{
+    font-size: 20px;
+    margin: 10px 0 40px; /*line spacing (above _ under)*/
+}
+.start-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 24px; /*space size of border*/
+    font-size: 24px;
+    font-family: 'Papyrus',fantasy;
+    background: transparent;
+    position: relative;
+    cursor: pointer; /*sets cursor shape when hovering over text*/
+    border-radius: 20px;
+}
+.start-btn:hover{
+    border: 1px solid olivedrab;
+    background: olivedrab;
+    transition: 0.5s;
+}
+/*SECTION: introduction of HOME page*/
+.content{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    background: linear-gradient(rgba(255,153,51,0.2),
+    rgba(255,153,51,0.2));
+}
+.content h1{
+    font-size: 24px;
+    font-family: 'Papyrus',fantasy;
+    padding-bottom: 20px;
+    color: olivedrab;
+}
+.content p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+    'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.content i{
+    color: orange;
+}
+.content b{
+    color: olivedrab;
+}
+.content p.bullet-list{
+    text-align: left;
+}
+   /*Format in order for pictures to have same parameters*/
+.oval-im{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+.rect-im{
+    width: 180px;
+    height: 180px;
+    border-radius: 40px;
+}
+.row{
+    /*Ensure when zoom feature implemented, does not increase side-scroll*/
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; /*Get the images displayed in the single row*/
+    padding-bottom: 15px;
+}
+.column{
+    width: 20%; /*Evenly space out the images in the row*/
+    padding: 5px;
+    transition: 0.5s;
+}
+.img-title{
+    position: relative;
+    width: 198px;
+    height: 5px;
+    font-family: 'Papyrus', fantasy;
+    color: olivedrab;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.column:hover{
+    /*Method to get 'all-around shadow' texture around an image*/
+    /*Set pixel values for the zeroes for genuine shadow effect*/
+    -webkit-filter: drop-shadow(0 0 25px olivedrab);
+    filter: drop-shadow(0 0 25px olivedrab);
+    transform: scale(1.1); /*'Zoom' feature on hover*/
+}
+.column:hover .img-title{
+    visibility: visible;
+    opacity: 1;
+}
+.references{
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    padding-top: 30px;
+    background: linear-gradient(rgba(107,142,35,0.2),
+    rgba(107,142,35,0.2));
+}
+.references h1{
+    font-family: 'Papyrus', fantasy;
+    color: orange;
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+.references h3{
+    font-family: 'Papyrus', fantasy;
+    color: forestgreen;
+    font-weight: 900;
+}
+.references a{
+    color: orange;
+}
+.tab{
+    display:inline-block;
+    margin-left: 40px;
+}
+
+/*not HOME page*/
+
+.sub-header{
+    min-height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255,153,51,0.2),
+    rgba(255,153,51,0.2)),
+    url(FroggyImages/tropicalBG.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+.sub-header img{
+    border-radius: 10px; /*Used to 'round' edges*/
+}
+.sub-header h1{
+    width: 90%;
+    color:black;
+    position: absolute; /*ensure position does not change*/
+    top: 40%; /* these two lines of code set the text to the middle*/
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: 'Papyrus',fantasy;
+    font-size: 40px;
+}
+.sub-header p{
+    width: 90%;
+    color:black;
+    position: absolute; /*ensure position does not change*/
+    top: 40%; /* these two lines of code set the text to the middle*/
+    left: 50%;
+    transform: translate(-50%,30%);
+    text-align: center;
+    font-family: 'Papyrus',fantasy;
+    font-size: 20px;
+    margin: 10px 0 40px;
+}
+.highlight-text{
+    color: olivedrab;
+}
+
+/*About page*/
+.row-table{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex; /*Get the images displayed in the single row*/
+}
+.row-table-v4{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex; /*Get the images displayed in the single row*/
+}
+.column-v3{
+    width: 33%;
+    padding: 25px;
+    transition: 0.5s;
+}
+.column-v4{
+    width: 25%;
+    padding: 25px;
+    transition: 0.5s;
+}
+.column-v3:hover, .column-v4:hover{
+    -webkit-filter: drop-shadow(0 0 25px olivedrab);
+    filter: drop-shadow(0 0 25px olivedrab);
+    transform: scale(1.1); /*'Zoom' feature on hover*/
+}
+.column-v3:hover .img-title, .column-v4:hover .img-title{
+    visibility: visible;
+    opacity: 1;
+}
+.slides-container{
+    width: 30%;
+    position: relative;
+    margin: auto auto 60px;
+    display: flex;
+}
+.pic-guess{
+    display: none;
+    transition: 0.5s;
+}
+.pic-guess:hover .layer h3{
+    bottom: 25%;
+    opacity: 1;
+}
+.large-rect-im{
+    width: 300px;
+    height: 260px;
+    border-radius: 25px;
+    object-fit: cover;
+    -webkit-animation: fadeEffect 0.5s;
+    animation: fadeEffect 0.5s;
+}
+.layer{
+    background: transparent;
+    height: 92%;
+    width: 100%;
+    position: relative;
+    bottom: 8%;
+    left: 0;
+    border-radius: 25px;
+    transform: translateY(-100%);
+    transition: 0.5s;
+}
+.prev, .next{
+    cursor: pointer;
+    top: 50%;
+    width: auto;
+    color: rgba(107,142,53,0.4);
+    font-weight: bolder;
+    font-size: 35px;
+    margin-top: 25%;
+    transition: 0.5s;
+}
+.prev{
+    margin-right: 10%;
+}
+.next{
+    margin-left: 10%;
+}
+.prev:hover, .next:hover{
+    color: olivedrab;
+}
+.pic-guess:hover .layer{
+    background: rgba(107,142,53,0.3);
+}
+.layer h3{
+    width: 100%;
+    color: orange;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/*Frog Care page*/
+.list-content{
+    width: 100%;
+    margin: auto;
+    background: linear-gradient(rgba(255,153,51,0.2),
+    rgba(255,153,51,0.2));
+    padding-bottom: 30px;
+}
+.list-content p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+    'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    text-align: left;
+}
+.list-left{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-style: solid;
+    border-color: forestgreen;
+    background: linear-gradient(rgba(255,153,51,0.2),
+    rgba(255,153,51,0.2));
+    padding: 0 5% 0;
+    margin-bottom: 30px;
+    border-radius: 25px;
+}
+.list-left h1{
+    font-size: 150px;
+    font-family: 'Papyrus',fantasy;
+    color: olivedrab;
+    text-align: left;
+    margin-right: 80px;
+}
+.list-right{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-style: solid;
+    border-color: forestgreen;
+    background: linear-gradient(rgba(255,153,51,0.2),
+    rgba(255,153,51,0.2));
+    padding: 0 5% 0;
+    margin-bottom: 30px;
+    border-radius: 25px;
+}
+.list-right h1{
+    font-size: 150px;
+    font-family: 'Papyrus',fantasy;
+    color: olivedrab;
+    text-align: right;
+    margin-left: 80px;
+}
+/*centers textforming from middle of text box*/
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.habitat-tabs{
+    border: 2px solid forestgreen;
+    background-color: rgba(107,142,53,0.3);
+    width: 70%;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+.habitat-tabs button{
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 3%;
+    border: none;
+    transition: 0.5s;
+    border-radius: 20px;
+    margin: none;
+    color: olivedrab;
+    font-weight: 600;
+}
+.habitat-tabs button:hover{
+    background-color: rgba(107,142,53,0.2);
+}
+.tab:focus{
+    background-color: rgba(107,142,53,0.4);
+    color: forestgreen;
+}
+.tabcontent{
+    width: 70%;
+    display: none;
+    margin: 10px auto;
+    background-color: rgba(255,153,51,0.2);
+    border: 2px solid forestgreen;
+    border-radius: 20px;
+    -webkit-animation: fadeEffect 0.5s;
+    animation: fadeEffect 0.5s;
+}
+@keyframes fadeEffect{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.tabcontent img{
+    width: 220px;
+    height: 180px;
+    border-radius: 20px;
+    margin: 10px;
+}
+.tabcontent p.tab-text{
+    text-align: left;
+    flex-basis: 70%;
+}
+.content h1.under-tab{
+    margin-top: 40px;
+}
+/*properties of the pro/con table*/
+.pro-con-table{
+    display: flex;
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+}
+.pro-con-table h2{
+    font-size: 20px;
+    font-family: 'Papyrus', fantasy;
+    text-align: center;
+    margin: 0;
+}
+.pro-con-table ul{
+    padding: 8px 0;
+    list-style: none;
+    margin: 0;
+}
+.pro-con-table li{
+    text-align: left;
+    padding: 16px 32px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+    'Trebuchet MS', sans-serif;
+}
+.pro-column{
+    flex: 1;
+}
+.pro-column h2{
+    background: olivedrab;
+}
+.pro-column ul{
+    border-right: 0.5px solid;
+}
+.pro-column ul li::before{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    color: olivedrab;
+    padding-right: 16px;
+}
+.con-column{
+    flex: 1;
+}
+.con-column h2{
+    background: orange;
+}
+.con-column ul li::before{
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    color: orange;
+    padding-right: 16px;
+}
+/*FROGGY Species page*/
+.sort-buttons{
+    display: flexbox;
+    text-align: center;
+}
+.sort-buttons button{
+    margin: 10px 70px;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Papyrus', fantasy;
+    border: 2px solid orange;
+    border-radius: 10px;
+    padding: 10px 70px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.sort-buttons button:hover{
+    background-color: rgba(255,153,51,0.5);
+}
+.sort:focus{
+    background-color: rgba(255,153,51,0.5);
+}
+.species-list-content{
+    width: 50%;
+    margin: auto;
+    padding: 60px 150px;
+    background: rgba(107,142,53,0.2);
+    border: 3px solid forestgreen;
+    border-radius: 20px;
+}
+.species-list-content img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+.species-list-content h3{
+    font-size: 28px;
+    font-family: 'Papyrus', fantasy;
+    color: olivedrab;
+}
+.species-list-content ul{
+    list-style: none;
+    padding: 8px 0;
+}
+.species-list-content ul li a{
+    display: flex;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+.species-list-content ul li a:hover{
+    transform: scale(1.1);
+    background: linear-gradient(rgba(255,153,51,0.3),
+    rgba(255,153,51,0.3));
+}
+/*Individual Frogs pages*/
+.frog-profile{
+    width: 75%;
+    display: flex;
+    margin: auto auto 30px;
+    padding: 50px;
+    background: rgba(107,142,53,0.3);
+    border-radius: 20px;
+}
+.frog-profile img{
+    width: 460px;
+    height: 420px;
+    border-radius: 20px;
+}
+.content p.profile-stats{
+    text-align: left;
+    flex-basis: 40%;
+}
+.habitat-stats{
+    width: 70%;
+    margin: auto auto 30px;
+    flex: 1;
+    background: rgba(255,153,51,0.2);
+    text-align: center;
+    border-radius: 20px;
+}
+.habitat-stats ul li{
+    display: inline-block;
+    padding: 8px 14px 14px;
+}
+/*Contact page*/
+.contact-row{
+    width: 70%;
+    margin: auto;
+    display: flex;
+}
+.contact-col{
+    width: 35%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.contact-col div i{
+    font-size: 30px;
+    color: forestgreen;
+    margin: 10px;
+    margin-right: 20px;
+}
+.contact-col div h5{
+    font-size: 14px;
+    color: black;
+}
+.contact-col div a{
+    text-decoration: none;
+}
+.contact-col2{
+    width: 65%;
+    margin-bottom: 30px;
+}
+.contact-col2 form{
+    padding: 50px 50px 30px;
+    background: rgba(107,142,53,0.7);
+    border: 2px solid forestgreen;
+    border-radius: 20px;
+}
+.contact-col2 input, .contact-col2 textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    border: 1px solid orange;
+}
+.contact-col2 button{
+    margin: 10px 70px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Papyrus', fantasy;
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.contact-col2 button:hover{
+    background: rgba(255,153,51,0.5);
+}
+
