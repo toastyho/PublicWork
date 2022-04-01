@@ -326,6 +326,10 @@ nav img{
 .pic-guess:hover .layer{
     background: rgba(107,142,53,0.3);
 }
+.pic-guess img{
+    max-width: 400px;
+    max-height: 320px;
+}
 .layer h3{
     width: 100%;
     color: orange;
