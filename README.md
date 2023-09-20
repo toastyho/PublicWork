@@ -1,4 +1,4 @@
-This repository consists of my work done on developing a website (passion project) in order to learn the fundamentals of HTML, CSS, JavaScript and little bit of PHP.
+This repository consists of my work done on developing a website for an elementary school in order to learn the fundamentals of HTML, CSS, JavaScript and little bit of PHP.
 
 You can find the source code on the master branch. The website was deployed using a free domain from Netlify. The link is given below:
 
